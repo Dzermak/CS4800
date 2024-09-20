@@ -16,11 +16,11 @@ function App() {
     { name: "Community Post Comment", endpoint: `${baseUrl}/api/CommunityPostComment` },
     { name: "Community Report", endpoint: `${baseUrl}/api/CommunityReport` },
     { name: "Flags Profile", endpoint: `${baseUrl}/api/FlagsProfile` },
-    { name: "Local Community Account", endpoint: `${baseUrl}/LocalCommunityAccount` },
+    { name: "Local Community Account", endpoint: `${baseUrl}/api/LocalCommunityAccount` },
     { name: "Post Comment", endpoint: `${baseUrl}/api/PostComment` },
     { name: "Post Report", endpoint: `${baseUrl}/api/PostReport` },
-    { name: "Search Tags and Flags", endpoint: `${baseUrl}/SearchTagsAndFlags` },
-    { name: "Tags Profile", endpoint: `${baseUrl}/TagsProfile` },
+    { name: "Search Tags and Flags", endpoint: `${baseUrl}/api/SearchTagsAndFlags` },
+    { name: "Tags Profile", endpoint: `${baseUrl}/api/TagsProfile` },
     { name: "User", endpoint: `${baseUrl}/api/User` },
   ];
 
