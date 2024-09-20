@@ -5,21 +5,23 @@ import "./App.css";
 function App() {
   const [output, setOutput] = useState(null);
   const [error, setError] = useState(null);
+  const baseUrl = import.meta.env.VITE_SERVER_URL;
 
   // Custom button names and their corresponding API endpoints
   const buttons = [
-    { name: "Post", endpoint: "http://localhost:8000/api/Post" },
-    { name: "Community", endpoint: "http://localhost:8000/api/Community" },
-    { name: "Community Post", endpoint: "http://localhost:8000/api/CommunityPost" },
-    { name: "Community Post Comment", endpoint: "http://localhost:8000/api/CommunityPostComment" },
-    { name: "Community Report", endpoint: "http://localhost:8000/api/CommunityReport" },
-    { name: "Flags Profile", endpoint: "http://localhost:8000/api/FlagsProfile" },
-    { name: "Local Community Account", endpoint: "http://localhost:8000/api/LocalCommunityAccount" },
-    { name: "Post Comment", endpoint: "http://localhost:8000/api/PostComment" },
-    { name: "Post Report", endpoint: "http://localhost:8000/api/PostReport" },
-    { name: "Search Tags and Flags", endpoint: "http://localhost:8000/api/SearchTagsAndFlags" },
-    { name: "Tags Profile", endpoint: "http://localhost:8000/api/TagsProfile" },
-    { name: "User", endpoint: "http://localhost:8000/api/User" },
+    
+    { name: "Post", endpoint: `${baseUrl}/api/Post` },
+    { name: "Community", endpoint: `${baseUrl}/api/Community` },
+    { name: "Community Post", endpoint: `${baseUrl}/api/CommunityPost` },
+    { name: "Community Post Comment", endpoint: `${baseUrl}/api/CommunityPostComment` },
+    { name: "Community Report", endpoint: `${baseUrl}/api/CommunityReport` },
+    { name: "Flags Profile", endpoint: `${baseUrl}/api/FlagsProfile` },
+    { name: "Local Community Account", endpoint: `${baseUrl}/LocalCommunityAccount` },
+    { name: "Post Comment", endpoint: `${baseUrl}/api/PostComment` },
+    { name: "Post Report", endpoint: `${baseUrl}/api/PostReport` },
+    { name: "Search Tags and Flags", endpoint: `${baseUrl}/SearchTagsAndFlags` },
+    { name: "Tags Profile", endpoint: `${baseUrl}/TagsProfile` },
+    { name: "User", endpoint: `${baseUrl}/api/User` },
   ];
 
   
