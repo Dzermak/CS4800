@@ -145,7 +145,38 @@ app.get("/api/User", async (req, res) => {
     }
 });
 
+app.post("/api/User", async (req, res) => {
+    try {
+        console.log(req.body);
+        const newUser = new User({
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            nickname: req.body.nickname,
+            email: req.body.email,
+            zipcode: req.body.zipcode,
+            password: req.body.password,
+            friendsList: req.body.freindsList,
+            followList: req.body.followList,
+            karma: req.body.karma,
+            communityIDs: req.body.communityIDs,
+            posts: req.body.posts,
+            age: req.body.age,
+            searchTags: req.body.searchTags,
+            postAndFlagsTags: req.body.postAndFlagsTags,
+            profilePic: req.body.profilePic,
+            parentAccount: req.body.parentAccount,
+            parentAccountID: req.body.parentAccountID,
+            childAccount: req.body.childAccount,
+            childAccountID: req.body.childAccountID,
 
+
+        })
+        await User.create(newUser);
+        res.json("data submitted")
+    } catch {
+        res.status(500).json({ error: "An error occured while fetching books" });
+    }
+});
 
 
 
