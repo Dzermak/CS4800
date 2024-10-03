@@ -1,6 +1,5 @@
 require("dotenv").config();
 const cors = require("cors");
-app.use(cors({ origin: 'https://cs4800-client.onrender.com' }));
 const express = require("express");
 const connectDB = require("./connectDB");
 const Post = require('./models/Post');
@@ -22,7 +21,9 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 connectDB();
-app.use(cors());
+app.use(cors({
+    origin: process.env.FRONTEND_URL || 'https://pixure-app.onrender.com/signup' // Add your actual frontend domain
+  }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
