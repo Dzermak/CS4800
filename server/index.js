@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 8000;
 
 connectDB();
 app.use(cors({
-    origin: process.env.FRONTEND_URL || 'https://pixure-app.onrender.com/signup' // Add your actual frontend domain
+    origin: process.env.FRONTEND_URL || 'https://pixure-app.onrender.com' // Add your actual frontend domain
   }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
