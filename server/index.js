@@ -1,5 +1,6 @@
 require("dotenv").config();
 const cors = require("cors");
+app.use(cors({ origin: 'https://cs4800-client.onrender.com' }));
 const express = require("express");
 const connectDB = require("./connectDB");
 const Post = require('./models/Post');
